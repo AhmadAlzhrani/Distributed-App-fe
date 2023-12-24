@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.primary-button{
+  @apply bg-blue-900 text-white font-semibold px-8 py-2 rounded hover:bg-blue-800 disabled:bg-gray-400 m-2 mx-8 my-4;
+}
+
+.boxx{
+  @apply border-2 rounded-lg px-16 py-8 bg-opacity-10 bg-blue-900 shadow-2xl;
+}
